@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './SwipeControls.css'
 import ReplayIcon from '@material-ui/icons/Replay';
 import CloseIcon from '@material-ui/icons/Close';
@@ -9,7 +9,25 @@ import { IconButton } from '@material-ui/core';
 
 
 
-function SwipeControls() {
+class SwipeControls extends Component {
+
+    constructor(){
+        super();
+
+        this.state = {
+           fav: false
+        }
+    }
+
+    changeColor(){
+        this.setState({fav: !this.state.fav})
+     }
+ 
+
+    render(){
+
+    let btn_class = this.state.fav ? "swipeControls-fav" : "swipeControls-notfav";
+
     return (
         <div className='swipeControls'>
             <IconButton className='swipeControls-replay' >
@@ -18,8 +36,8 @@ function SwipeControls() {
             <IconButton className='swipeControls-flash' > 
                 <FlashOnIcon fontSize="large" />
             </IconButton>
-            <IconButton className = 'swipeControls-fav'>
-                <FavoriteIcon fontSize="large" />
+            <IconButton className = {btn_class} onClick = {this.changeColor.bind(this)} >
+                <FavoriteIcon fontSize="large"  />
             </IconButton>
             <IconButton className='swipeControls-star' >
                 <StarRateIcon fontSize="large" />
@@ -30,5 +48,5 @@ function SwipeControls() {
         </div>
     )
 }
-
+}
 export default SwipeControls
