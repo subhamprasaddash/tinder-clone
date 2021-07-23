@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    padding: 10px;
+    padding-bottom: 0px;
+    background: rgb(255,90,154);
+    background: linear-gradient(90deg, rgba(255,90,154,1) 0%, rgba(252,104,115,1) 50%, rgba(255,129,121,1) 100%);
+}
+
+
+.navabar_tinderlogo{
+    object-fit: contain;
+    height: 60px;
+    width: auto;
+}
