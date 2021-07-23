@@ -2,38 +2,46 @@
     display: flex;
     justify-content: space-evenly;
     position: fixed;
-    bottom: 2%;
+    bottom: 0%;
+    padding: 0.5vw;
     width: 100%;
+    
+    
 }
 
 .swipeControls .MuiIconButton-root{
-    background-color: white;
-    box-shadow: 0px 10px 53px 0px rgba(0,0,0,0.3) !important;
+    background: rgb(255,90,154);
+    background: linear-gradient(90deg, rgba(255,90,154,1) 0%, rgba(252,104,115,1) 50%, rgba(255,129,121,1) 100%);
+    box-shadow: 0px 10px 53px 0px rgba(0,0,0,0.4) !important;
     padding: 1vw;
 }
 
-.swipeControls-flash{
+.swipeControls-flash :hover{
     color: rgb(48, 104, 226) !important;
 }
 
 .swipeControls-notfav :hover{
-    color: rgb(228, 58, 58) !important;
+    color : rgb(226, 24, 24) !important;
 }
 
 .swipeControls-fav{
-    color: rgb(228, 58, 58) !important;
+    color: rgb(226, 24, 24) !important;
 }
 
 .swipeControls-replay{
-    color: rgb(230, 202, 44) !important;
+    color: rgb(0, 217, 255) !important;
 }
 
-.swipeControls-star{
+.swipeControls-star {
+    color: rgb(58, 222, 228) !important;
+}
+
+.swipeControls-notstar :hover{
     color: rgb(58, 222, 228) !important;
 }
 
 .swipeControls-close{
-    color: rgb(228, 58, 58) !important;
+    color: rgb(255, 0, 0) !important;
 }
 
 

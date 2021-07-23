@@ -15,18 +15,23 @@ class SwipeControls extends Component {
         super();
 
         this.state = {
-           fav: false
+           fav: false,
+           star: false
         }
     }
 
-    changeColor(){
+    changeColorFav(){
         this.setState({fav: !this.state.fav})
      }
+    changeColorStar(){
+        this.setState({star: !this.state.star})
+    }
  
 
     render(){
 
-    let btn_class = this.state.fav ? "swipeControls-fav" : "swipeControls-notfav";
+    let btn_class_fav = this.state.fav ? "swipeControls-fav" : "swipeControls-notfav";
+    let btn_class_star = this.state.star ? "swipeControls-star" : "swipeControls-notstar";
 
     return (
         <div className='swipeControls'>
@@ -36,10 +41,10 @@ class SwipeControls extends Component {
             <IconButton className='swipeControls-flash' > 
                 <FlashOnIcon fontSize="large" />
             </IconButton>
-            <IconButton className = {btn_class} onClick = {this.changeColor.bind(this)} >
+            <IconButton className = {btn_class_fav} onClick = {this.changeColorFav.bind(this)} >
                 <FavoriteIcon fontSize="large"  />
             </IconButton>
-            <IconButton className='swipeControls-star' >
+            <IconButton className = {btn_class_star} onClick = {this.changeColorStar.bind(this)} >
                 <StarRateIcon fontSize="large" />
             </IconButton>
             <IconButton className='swipeControls-close' >
